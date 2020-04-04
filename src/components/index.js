@@ -1,11 +1,11 @@
 import Button from './Button'
 import Header from './Header'
-import PledgeBody from './PledgeBody'
+import PledgeComments from './PledgeComments'
 import PledgeHeader from './PledgeHeader'
 
 export {
   Button,
   Header,
-  PledgeBody,
+  PledgeComments,
   PledgeHeader,
 }

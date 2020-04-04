@@ -1,5 +1,5 @@
 .PledgeHeader {
-  padding: 110px;
+  padding: 50px 10px;
   background-color: rgba(146, 59, 53, 0.25);
 }
 
@@ -18,10 +18,64 @@
 }
 
 .PledgeHeader .title .badge img {
-  height: 100px;
+  height: 94px;
+}
+
+.PledgeHeader .donation-card {
+  max-width: 756px;
+  margin: 0 auto;
+}
+
+.PledgeHeader .donation-title {
+  text-align: center;
 }
 
 .PledgeHeader .description {
   text-align: center;
   color: #3E3F48;
 }
+
+.PledgeHeader .donation-progress {
+  display: flex;
+}
+
+.PledgeHeader .donation-progress .bar {
+  background-color: white;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.PledgeHeader .donation-progress .bar-wrapper {
+  flex-grow: 1;
+}
+
+.PledgeHeader .donation-progress .bar-inner {
+  background-color: var(--primary-color);
+  height: 100%;
+  border-radius: 5px;
+}
+
+.PledgeHeader .donation-progress .bar-stats {
+  display: flex;
+}
+
+.PledgeHeader .donation-progress .bar-stats > * {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 2px;
+  color: #656565;
+}
+
+.PledgeHeader .donation-progress .total {
+  flex-grow: 0;
+  padding-left: 27px;
+  padding-right: 5px;
+  color: #3E3F48;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* @media only screen and (min-width: 768px) {...} */
+/* 360, 768, 1200 */

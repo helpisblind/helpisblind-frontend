@@ -1,5 +1,5 @@
 import React from 'react';
-import './PledgeBody.css';
+import './PledgeComments.css';
 
 function PledgeBody () {
 	return (

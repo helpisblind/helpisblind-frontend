@@ -1,12 +1,19 @@
-import React, { Fragment } from 'react'
-import { PledgeHeader, PledgeBody, Header } from '../components';
+import React, { Fragment, useEffect } from 'react'
+import { PledgeHeader, PledgeComments, Header } from '../components'
+import { getPledge } from '../api'
 
 function Donate () {
+  // useEffect(() => {
+  //   getPledge().then(({ data }) => {
+  //     console.log(data);
+  //   })
+  // }, [])
+
   return (
     <Fragment>
       <Header />
       <PledgeHeader />
-      <PledgeBody />
+      <PledgeComments />
     </Fragment>
   )
 }

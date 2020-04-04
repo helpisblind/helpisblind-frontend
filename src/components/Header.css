@@ -1,16 +1,16 @@
 .Header {
-  color: #A72018;
-  font-size: 28px;
-  padding: 22px 90px;
+  padding: 22px 60px;
   display: flex;
 }
 
 .Header .title {
+  color: var(--primary-color);
   text-decoration: none;
+  font-size: 28px;
 }
 
 .Header .title:visited {
-  color: inherit;
+  color: var(--primary-color);
 }
 
 .Header .left {
@@ -21,4 +21,9 @@
 .Header .right {
   flex-grow: 1;
   text-align: right;
+}
+
+.Header .right .about {
+  text-decoration: none;
+  color: var(--primary-color);
 }

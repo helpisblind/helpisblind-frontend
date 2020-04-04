@@ -1,29 +1,29 @@
 import React, { createContext, useReducer, useContext } from 'react'
 import { reducer, initialState } from './reducer'
 
-const DiscountsStateContext = createContext()
-const DiscountsDispatchContext = createContext()
+const StoreStateContext = createContext()
+const StoreDispatchContext = createContext()
 
-function DiscountsProvider({ children }) {
+function StoreProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <DiscountsStateContext.Provider value={state}>
-      <DiscountsDispatchContext.Provider value={dispatch}>
+    <StoreStateContext.Provider value={state}>
+      <StoreDispatchContext.Provider value={dispatch}>
         {children}
-      </DiscountsDispatchContext.Provider>
-    </DiscountsStateContext.Provider>
+      </StoreDispatchContext.Provider>
+    </StoreStateContext.Provider>
   )
 }
 
-function useDiscounts() {
+function useStore() {
   return [
-    useContext(DiscountsStateContext),
-    useContext(DiscountsDispatchContext)
+    useContext(StoreStateContext),
+    useContext(StoreDispatchContext)
   ]
 }
 
 export {
-  DiscountsProvider,
-  useDiscounts,
+  StoreProvider,
+  useStore,
 }

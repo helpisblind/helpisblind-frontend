@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { Home, About, Donate } from "./pages"
-import { DiscountsProvider } from './store/index'
+import { StoreProvider } from './store/index'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +10,7 @@ import {
 
 function App() {
   return (
-    <DiscountsProvider>
+    <StoreProvider>
       <Router className="App">
         <Switch>
           <Route path="/about">
@@ -24,7 +24,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </DiscountsProvider>
+    </StoreProvider>
   );
 }
 

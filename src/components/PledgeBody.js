@@ -4,7 +4,7 @@ import './PledgeBody.css';
 function PledgeBody () {
 	return (
 		<div className="PledgeBody-wrapper">
-			Pledge Body
+			body
 		</div>
 	)
 }

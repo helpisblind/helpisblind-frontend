@@ -1,4 +1,27 @@
-.PledgeHeader-wrapper {
-  background-color: lightblue;
-  min-height: 400px;
+.PledgeHeader {
+  padding: 110px;
+  background-color: rgba(146, 59, 53, 0.25);
+}
+
+.PledgeHeader .wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.PledgeHeader .title {
+  padding-left: 50px;
+}
+
+.PledgeHeader .title > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.PledgeHeader .title .badge img {
+  height: 100px;
+}
+
+.PledgeHeader .description {
+  text-align: center;
+  color: #3E3F48;
 }

@@ -1,0 +1,24 @@
+.Header {
+  color: #A72018;
+  font-size: 28px;
+  padding: 22px 90px;
+  display: flex;
+}
+
+.Header .title {
+  text-decoration: none;
+}
+
+.Header .title:visited {
+  color: inherit;
+}
+
+.Header .left {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.Header .right {
+  flex-grow: 1;
+  text-align: right;
+}

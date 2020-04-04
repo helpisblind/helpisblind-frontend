@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 import './Header.css'
 
 function Header () {
@@ -14,7 +15,7 @@ function Header () {
 			</div>
 
 			<div className='right'>
-				<a href='/about' className="about" style={{marginRight: 30}}>About Us</a>
+				<Link to="/about" className="about" style={{marginRight: 30}}>About</Link>
 
 				<Button onClick={askForHelp} style={{marginRight: 30}}>
 					Ask for Help

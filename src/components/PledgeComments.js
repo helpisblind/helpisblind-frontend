@@ -1,38 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import Button from './Button'
+import { getMessagesByFundraisingId } from '../api';
 import './PledgeComments.css'
 
-function PledgeBody () {
+function PledgeBody ({
+	fundraise,
+}) {
+	const [messages, setMessages] = useState()
+
+	useEffect(() => {
+		getMessagesByFundraisingId(fundraise._id).then(({data}) => {
+			setMessages(data)
+		}).catch((err) => {
+
+		})
+	}, [fundraise])
+
 	return (
-		<div className="PledgeComments">
-			<div className='title'>
-				<h4>Comments from donators</h4>
-			</div>
+		<Fragment>
+			{messages && (
+				<div className="PledgeComments">
+					<div className='title'>
+						<h4>Comments from donators</h4>
+					</div>
 
-			<div className='comment-wrapper'>
-				<div className='comment'>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In adipiscing ut amet gravida ac etiam. Non fames et eget malesuada. Quis congue in malesuada interdum nunc suspendisse morbi.</p>
-				</div>				
-			</div>
+					{messages.map(message => (
+						<div className='comment-wrapper'>
+							<div className='comment'>
+								<p>{message.message}</p>
+							</div>				
+						</div>						
+					))}
 
-			<div className='comment-wrapper'>
-				<div className='comment'>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In adipiscing ut amet gravida ac etiam. Non fames et eget malesuada. Quis congue in malesuada interdum nunc suspendisse morbi.</p>
-				</div>				
-			</div>	
-
-			<div className='comment-wrapper'>
-				<div className='comment'>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In adipiscing ut amet gravida ac etiam. Non fames et eget malesuada. Quis congue in malesuada interdum nunc suspendisse morbi.</p>
-				</div>				
-			</div>
-
-      <div className='donate-button'>
-        <Button>
-          Donate
-        </Button>
-      </div>			
-		</div>
+					<div className='donate-button'>
+						<Button>
+							Donate
+						</Button>
+					</div>			
+				</div>			
+			)}			
+		</Fragment>
 	)
 }
 

@@ -11,7 +11,7 @@ function PledgeHeader ({
 	history,
 }) {
 	const [hasError, setError] = useState(false)
-
+	
 	const onSubmit = (form) => {
 		postDonation({
 			...form,

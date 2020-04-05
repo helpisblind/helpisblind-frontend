@@ -13,3 +13,7 @@ export function postDonation (body) {
   return axios.post(`${API_URL}/donations`, body)
 }
 
+export function getMessagesByFundraisingId (fundraisingId) {
+  return axios.get(`${API_URL}/fundraisings/messages/${fundraisingId}`)
+}
+

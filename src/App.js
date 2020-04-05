@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Home, About, Donate } from "./pages"
+import { Home, About, Donate, AskForHelp } from "./pages"
 import { StoreProvider } from './store/index'
 import {
   BrowserRouter as Router,
@@ -18,6 +18,9 @@ function App() {
           </Route>
           <Route path="/donate">
             <Donate />
+          </Route>
+          <Route path="/askforhelp">
+            <AskForHelp />
           </Route>
           <Route path="/">
             <Home />

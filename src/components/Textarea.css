@@ -6,3 +6,9 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.Textarea-border {
+  border-color: var(--primary-color);
+  border-style: solid;
+  border-width: thin;
+}

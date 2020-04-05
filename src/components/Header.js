@@ -1,11 +1,14 @@
 import React from 'react';
 import Button from './Button';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
 import './Header.css'
 
-function Header () {
+function Header ({
+	history,
+}) {
 	const askForHelp = () => {
-		console.log('clicou')
+		history.push('/askforhelp')
 	}
 
 	return (
@@ -29,4 +32,4 @@ function Header () {
 	)
 }
 
-export default Header;
+export default withRouter(Header);

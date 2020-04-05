@@ -6,14 +6,15 @@
 
   background: transparent;
   text-align: center;
-  padding: 20px 0;
   cursor: pointer;
   border-style: none;
 }
 
 .ButtonBanner img {
-  width: 60px;
+  display: block;
   transform: rotate(-90deg);
+  width: 60px;
+  margin-bottom: 25px;
 }
 
 .ButtonBanner:active {
@@ -24,10 +25,10 @@
   outline: 0;
 }
 
-.ButtonBanner img {
-  width: 66px;
-}
-
 .ButtonBanner:hover {
   background-color: rgba(146, 59, 53, 0.1);
+}
+
+.ButtonBanner .text {
+  margin: 0;
 }

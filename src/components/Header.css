@@ -1,6 +1,7 @@
 .Header {
   padding: 22px 60px;
   display: flex;
+  border-bottom: #F8F8F8 solid;
 }
 
 .Header .title {

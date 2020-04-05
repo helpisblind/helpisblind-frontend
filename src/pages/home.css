@@ -1,0 +1,47 @@
+.Home {
+
+}
+
+.Home .top {
+  padding: 25vh 0;
+}
+
+.Home .top .wrapper {
+  width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Home .top .wrapper .prefix {
+  font-size: 110px;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.Home .top .wrapper .suffix {
+  font-size: 140px;
+  text-align: right;
+  margin: 0;
+  color: #54130F;
+  font-family: Alex Brush;
+}
+
+.Home .mid {
+  background-color: #D9D9D9;
+  padding: 10vh 0;
+}
+
+.Home .mid .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.Home .bottom {
+  padding: 10vh 0;
+  text-align: center;
+}
+
+.Home .bottom .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}

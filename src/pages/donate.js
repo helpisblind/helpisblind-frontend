@@ -15,7 +15,7 @@ const getDaysLeft = (date) => {
 }
 
 const getAmountRaisedPercentage = ({amountRaised, goal}) => {
-  return amountRaised / goal * 100 
+  return Math.floor(amountRaised / goal * 100) 
 }
 
 const withExtraData = (fundraise) => {

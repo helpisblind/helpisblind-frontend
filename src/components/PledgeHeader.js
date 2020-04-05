@@ -43,7 +43,7 @@ function PledgeHeader ({
 					<div className="badge">
 						<img src={anonymous.url} alt="badge" />
 					</div>
-					<h1>{anonymous.animal} {anonymous.adjective} needs your help!</h1>
+					<h1>{anonymous.adjective} {anonymous.animal} needs your help!</h1>
 				</div>
 				<div className="description">
 					<h4>{fundraise.story}</h4>

@@ -7,8 +7,8 @@ import './Header.css'
 function Header ({
 	history,
 }) {
-	const askForHelp = () => {
-		history.push('/askforhelp')
+	const redirect = (url) => {
+		history.push(url)
 	}
 
 	return (
@@ -20,12 +20,12 @@ function Header ({
 			<div className='right'>
 				<Link to="/about" className="about">About</Link>
 
-				<Button onClick={askForHelp} className='help'>
+				<Button onClick={() => redirect('/donate')} className='donate'>
+					Donate ❤
+				</Button>				
+
+				<Button onClick={() => redirect('/askforhelp')} className='help' theme='outline'>
 					Ask for Help
-				</Button>
-				
-				<Button onClick={askForHelp} theme='outline' className='pledge'>
-					Access my Pledge
 				</Button>
 			</div>
 		</header>

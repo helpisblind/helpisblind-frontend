@@ -30,12 +30,12 @@
   margin-right: 30px;
 }
 
-.Header .right .help {
+.Header .right .donate {
   margin-right: 30px;
 }
 
 @media only screen and (max-width: 768px) {
-  .Header .right .pledge,
+  .Header .right .donate,
   .Header .right .about {
     display: none;
   }

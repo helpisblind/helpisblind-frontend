@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import { Header, FundraiseForm, Toast } from '../components'
 import { postFundraise } from '../api'
+import { withRouter } from 'react-router-dom'
 import './askforhelp.css'
 
-function AskForHelp () {
+function AskForHelp ({
+  history,
+}) {
   const [hasError, setError] = useState(false)
 
   const onSubmit = (form) => {
-    postFundraise(form).then(result => {
-      
+    postFundraise(form).then(({data}) => {
+      history.push(`/confirmation?id=${data._id}`)
     }).catch(err => {
       setError(true)
       setTimeout(() => {
@@ -28,10 +31,10 @@ function AskForHelp () {
       </div>
 
       {hasError && (
-        <Toast message={'Formulário inválido'} />
+        <Toast message={'Invalid form, please verify your data'} />
       )}
     </div>
   )
 }
 
-export default AskForHelp
+export default withRouter(AskForHelp)

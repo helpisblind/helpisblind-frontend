@@ -1,5 +1,6 @@
 import React from 'react';
 import DonationForm from './DonationForm'
+import ButtonBanner from './ButtonBanner'
 import './PledgeHeader.css';
 
 function PledgeHeader () {
@@ -10,6 +11,8 @@ function PledgeHeader () {
 
 	return (
 		<div className="PledgeHeader">
+			<ButtonBanner alt='Go to next pledge' />
+
 			<div className="wrapper">
 				<div className="title">
 					<div className="badge">
@@ -42,6 +45,7 @@ function PledgeHeader () {
 				</div>			
 			</div>
 
+			{/* Refactor to make use of ButtonBanner */}
 			<button className='arrow-banner'>
 				<img src='./assets/arrow.png' alt='scroll to bottom' />
 			</button>

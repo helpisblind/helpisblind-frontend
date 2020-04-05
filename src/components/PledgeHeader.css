@@ -1,5 +1,6 @@
 .PledgeHeader {
   background-color: rgba(146, 59, 53, 0.25);
+  position: relative;
 }
 
 .PledgeHeader .wrapper {

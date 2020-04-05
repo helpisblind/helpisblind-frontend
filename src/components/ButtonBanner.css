@@ -1,0 +1,33 @@
+.ButtonBanner {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-orientation: sideways-right;
+
+  background: transparent;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+  border-style: none;
+}
+
+.ButtonBanner img {
+  width: 60px;
+  transform: rotate(-90deg);
+}
+
+.ButtonBanner:active {
+  transform: translateY(1px);
+}
+
+.ButtonBanner:focus {
+  outline: 0;
+}
+
+.ButtonBanner img {
+  width: 66px;
+}
+
+.ButtonBanner:hover {
+  background-color: rgba(146, 59, 53, 0.1);
+}

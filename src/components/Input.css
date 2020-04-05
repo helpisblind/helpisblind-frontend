@@ -1,10 +1,14 @@
 .Input {
   font-size: 16px;
-  padding: 4px 15px;
+  padding: 10px 15px;
   border-radius: 10px;
   border-style: none;
   width: 100%;
   box-sizing: border-box;
+}
+
+.Input:focus {
+  outline: 0;
 }
 
 .Input-border {

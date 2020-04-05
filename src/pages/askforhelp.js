@@ -1,11 +1,15 @@
 import React from 'react'
 import { Header, FundraiseForm } from '../components'
+import { postFundraise } from '../api'
 import './askforhelp.css'
 
 function AskForHelp () {
   const onSubmit = (event) => {
     event.preventDefault()
-    console.log('sumit')
+    
+    const form = event.data
+    console.log(event)
+    postFundraise.post(form)
   }
 
   return (

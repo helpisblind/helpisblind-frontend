@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect } from 'react'
 import { PledgeHeader, PledgeComments, Header } from '../components'
-import { getPledge } from '../api'
+import { getFundraise } from '../api'
 
 function Donate () {
   useEffect(() => {
-    getPledge().then(({ data }) => {
+    getFundraise().then(({ data }) => {
       console.log(data);
     })
   }, [])

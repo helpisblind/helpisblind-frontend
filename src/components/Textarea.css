@@ -1,10 +1,14 @@
 .Textarea {
   border-radius: 10px;
   font-size: 16px;
-  padding: 4px 10px;
+  padding: 10px;
   border-style: none;
   width: 100%;
   box-sizing: border-box;
+}
+
+.Textarea:focus {
+  outline: 0;
 }
 
 .Textarea-border {

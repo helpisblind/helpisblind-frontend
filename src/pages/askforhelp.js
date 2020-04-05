@@ -11,7 +11,7 @@ function AskForHelp ({
 
   const onSubmit = (form) => {
     postFundraise(form).then(({data}) => {
-      history.push(`/confirmation?id=${data._id}`)
+      history.push(`/thankyou?id=${data._id}`)
     }).catch(err => {
       setError(true)
       setTimeout(() => {

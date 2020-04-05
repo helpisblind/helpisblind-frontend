@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Home, About, Donate, AskForHelp, Confirmation } from "./pages"
+import { Home, About, Donate, AskForHelp, Confirmation, Thankyou } from "./pages"
 import { StoreProvider } from './store/index'
 import {
   BrowserRouter as Router,
@@ -24,7 +24,10 @@ function App() {
           </Route>
           <Route path="/confirmation">
             <Confirmation />
-          </Route>          
+          </Route>    
+          <Route path="/thankyou">
+            <Thankyou />
+          </Route>       
           <Route path="/">
             <Home />
           </Route>

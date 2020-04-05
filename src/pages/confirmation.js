@@ -21,7 +21,7 @@ function Confirmation ({
         history.push('/')
       })
     }
-  }, [])
+  }, [history])
 
   return (
     <Fragment>

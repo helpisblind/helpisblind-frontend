@@ -3,7 +3,9 @@ import DonationForm from './DonationForm'
 import ButtonBanner from './ButtonBanner'
 import './PledgeHeader.css';
 
-function PledgeHeader () {
+function PledgeHeader ({
+	fundraise,
+}) {
 	const onSubmit = (event) => {
 		event.preventDefault()
 		console.log('onSubimt', event)
@@ -21,7 +23,7 @@ function PledgeHeader () {
 					<h1>Castor felpudo needs your help!</h1>
 				</div>
 				<div className="description">
-					<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In adipiscing ut amet gravida ac etiam. Non fames et eget malesuada. Quis congue in malesuada interdum nunc suspendisse morbi. A neque neque, nam porta fringilla nunc enim pretium, mauris. Imperdiet sit nulla orci leo, libero at. Sit sit sed a etiam viverra pharetra enim sagittis.dcsasfsdfvzsdvdsgvdsgvsdvsdsdvsvs</h4>
+					<h4>{fundraise.story}</h4>
 				</div>
 				<div className="donation-card">
 					<div className="donation-title">
@@ -33,12 +35,12 @@ function PledgeHeader () {
 								<div className="bar-inner" style={{width: '65%'}}></div>
 							</div>
 							<div className="bar-stats">
-								<p>752kr</p>
-								<p>65% of the goal</p>
-								<p>26 days left</p>
+								<p>{fundraise.amountRaised}kr</p>
+								<p>{fundraise.amountRaisedPercentage}% of the goal</p>
+								<p>{fundraise.daysLeft}</p>
 							</div>							
 						</div>
-						<div className="total">1.157kr</div>
+						<div className="total">{fundraise.goal}kr</div>
 					</div>
 
 					<DonationForm onSubmit={onSubmit} />

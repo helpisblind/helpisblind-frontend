@@ -1,0 +1,21 @@
+.Toast {
+  position: fixed;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.Toast .container {
+  padding: 10px;
+  min-width: 200px;
+  background-color: var(--primary-color);
+  text-align: center;
+  display: inline-block;
+  color: white;
+}
+
+.Toast-animate {
+  transition: 0.5s ease-in;
+  bottom: 0;
+}

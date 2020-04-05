@@ -1,22 +1,18 @@
 import React from 'react'
 import './Textarea.css'
 
-function TextArea ({
+function Textarea ({
   border,
   classes,
   ...props
 }) {
-  if (border) {
-    classes.push('Textarea-border')
-  }
-
   return (
-    <textarea className={classes.join(' ')} {...props} />
+    <textarea className={`Textarea ${border? 'Textarea-border' : ''}`} {...props} />
   )
 }
 
-TextArea.defaultProps = {
+Textarea.defaultProps = {
   classes: ['Textarea'],
 }
 
-export default TextArea
+export default Textarea

@@ -4,6 +4,7 @@ import PledgeComments from './PledgeComments'
 import PledgeHeader from './PledgeHeader'
 import Input from './Input'
 import FundraiseForm from './FundraiseForm'
+import Toast from './Toast'
 
 export {
   Button,
@@ -12,4 +13,5 @@ export {
   PledgeHeader,
   Input,
   FundraiseForm,
+  Toast,
 }

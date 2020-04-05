@@ -6,12 +6,8 @@ function Input ({
   classes,
   ...props
 }) {
-  if (border) {
-    classes.push('Input-border')
-  }
-
   return (
-    <input className={classes.join(' ')} {...props} />
+    <input className={`Input ${border? 'Input-border' : ''}`} {...props} />
   )
 }
 

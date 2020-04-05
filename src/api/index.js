@@ -6,5 +6,5 @@ export function getFundraise () {
 }
 
 export function postFundraise (body) {
-  return axios.get(`${API_URL}/fundraisings`, body)
+  return axios.post(`${API_URL}/fundraisings`, body)
 }

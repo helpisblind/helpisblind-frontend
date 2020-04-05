@@ -24,9 +24,14 @@ function FundraiseForm ({
     })
   }
 
+  const handleOnSubmit = (event) => {
+    event.preventDefault()
+    onSubmit(form)
+  }
+
   return (
     <div className='FundraiseForm'>
-      <form onSubmit={onSubmit} className='form'>
+      <form onSubmit={handleOnSubmit} className='form'>
         <Label>Tell your story in 400 characters*</Label>
         <Textarea placeholder='Type in your story here...' border rows='3' value={form.story} maxlenth='400' onChange={onChange('story')} />
 

@@ -1,15 +1,20 @@
-import React from 'react'
-import { Header, FundraiseForm } from '../components'
+import React, { useState } from 'react'
+import { Header, FundraiseForm, Toast } from '../components'
 import { postFundraise } from '../api'
 import './askforhelp.css'
 
 function AskForHelp () {
-  const onSubmit = (event) => {
-    event.preventDefault()
-    
-    const form = event.data
-    console.log(event)
-    postFundraise.post(form)
+  const [hasError, setError] = useState(false)
+
+  const onSubmit = (form) => {
+    postFundraise(form).then(result => {
+      
+    }).catch(err => {
+      setError(true)
+      setTimeout(() => {
+        setError(false)
+      }, 3000)
+    })
   }
 
   return (
@@ -21,6 +26,10 @@ function AskForHelp () {
 
         <FundraiseForm onSubmit={onSubmit} />
       </div>
+
+      {hasError && (
+        <Toast message={'Formulário inválido'} />
+      )}
     </div>
   )
 }

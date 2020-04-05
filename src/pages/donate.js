@@ -29,10 +29,14 @@ const withExtraData = (fundraise) => {
 function Donate () {
   const [fundraise, setFundraise] = useState()
 
-  useEffect(() => {
+  const getNewFundraise = () => {
     getFundraise().then(({ data }) => {
       setFundraise(withExtraData(data))
     })
+  }
+
+  useEffect(() => {
+    getNewFundraise()
   }, [])
 
   return (
@@ -40,7 +44,7 @@ function Donate () {
       <Header />
       {fundraise && (
         <Fragment>
-          <PledgeHeader fundraise={fundraise} />
+          <PledgeHeader fundraise={fundraise} onGoToNextClick={getNewFundraise} />
           <PledgeComments fundraise={fundraise} />
         </Fragment>
       )}

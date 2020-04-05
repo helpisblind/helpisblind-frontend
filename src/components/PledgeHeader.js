@@ -9,6 +9,7 @@ import Toast from './Toast';
 function PledgeHeader ({
 	fundraise,
 	history,
+	onGoToNextClick,
 }) {
 	const [hasError, setError] = useState(false)
 	
@@ -28,7 +29,7 @@ function PledgeHeader ({
 
 	return (
 		<div className="PledgeHeader">
-			<ButtonBanner alt='Go to next pledge' />
+			<ButtonBanner alt='Go to next pledge' onClick={onGoToNextClick} />
 
 			<div className="wrapper">
 				<div className="title">

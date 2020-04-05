@@ -15,13 +15,13 @@ function Header () {
 			</div>
 
 			<div className='right'>
-				<Link to="/about" className="about" style={{marginRight: 30}}>About</Link>
+				<Link to="/about" className="about">About</Link>
 
-				<Button onClick={askForHelp} style={{marginRight: 30}}>
+				<Button onClick={askForHelp} className='help'>
 					Ask for Help
 				</Button>
 				
-				<Button onClick={askForHelp} theme='outline'>
+				<Button onClick={askForHelp} theme='outline' className='pledge'>
 					Access my Pledge
 				</Button>
 			</div>

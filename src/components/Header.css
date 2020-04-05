@@ -26,4 +26,29 @@
 .Header .right .about {
   text-decoration: none;
   color: var(--primary-color);
+  margin-right: 30px;
+}
+
+.Header .right .help {
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Header .right .pledge,
+  .Header .right .about {
+    display: none;
+  }
+
+  .Header {
+    padding: 10px;
+  }
+
+  .Header .right .help {
+    margin: 0;
+  }
+
+  .Header .right button {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

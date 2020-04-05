@@ -3,11 +3,11 @@ import { PledgeHeader, PledgeComments, Header } from '../components'
 import { getPledge } from '../api'
 
 function Donate () {
-  // useEffect(() => {
-  //   getPledge().then(({ data }) => {
-  //     console.log(data);
-  //   })
-  // }, [])
+  useEffect(() => {
+    getPledge().then(({ data }) => {
+      console.log(data);
+    })
+  }, [])
 
   return (
     <Fragment>

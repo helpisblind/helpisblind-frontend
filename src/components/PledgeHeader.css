@@ -9,12 +9,16 @@
 }
 
 .PledgeHeader .title {
-  padding-left: 50px;
+  /* padding-left: 50px; */
 }
 
 .PledgeHeader .title > * {
   display: inline-block;
   vertical-align: middle;
+}
+
+.PledgeHeader .title .badge {
+  margin-right: 20px;
 }
 
 .PledgeHeader .title .badge img {
@@ -31,8 +35,8 @@
 }
 
 .PledgeHeader .description {
+  word-break: break-word;
   text-align: center;
-  color: #3E3F48;
 }
 
 .PledgeHeader .donation-progress {
@@ -77,5 +81,8 @@
   margin: 0;
 }
 
-/* @media only screen and (min-width: 768px) {...} */
-/* 360, 768, 1200 */
+@media only screen and (max-width: 768px) {
+  .PledgeHeader .wrapper .title .badge {
+    margin: 0;
+  }
+}

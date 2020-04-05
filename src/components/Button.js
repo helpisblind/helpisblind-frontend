@@ -6,9 +6,11 @@ function Button ({
   onClick,
   style,
   theme,
+  className,
 }) {
+
   return (
-    <div className='Button'>
+    <div className={`Button ${className}`}>
       <button className={theme} onClick={onClick} style={style}>
         {children}
       </button>
@@ -18,6 +20,7 @@ function Button ({
 
 Button.defaultProps = {
   theme: 'primary',
+  className: '',
 }
 
 export default Button;

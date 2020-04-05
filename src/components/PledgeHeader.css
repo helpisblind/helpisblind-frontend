@@ -112,4 +112,8 @@
   .PledgeHeader .wrapper .arrow-banner img {
     width: 33px;
   }
+
+  .ButtonBanner {
+    display: none;
+  }
 }

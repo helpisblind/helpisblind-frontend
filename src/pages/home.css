@@ -1,13 +1,10 @@
-.Home {
-
-}
-
 .Home .top {
   padding: 25vh 0;
 }
 
 .Home .top .wrapper {
   width: 640px;
+  padding: 15px;
   margin: 0 auto;
   text-align: center;
 }
@@ -16,6 +13,7 @@
   font-size: 110px;
   color: var(--primary-color);
   margin: 0;
+  text-align: left;
 }
 
 .Home .top .wrapper .suffix {
@@ -32,8 +30,13 @@
 }
 
 .Home .mid .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 15px;
+}
+
+.Home .mid .wrapper {
+  word-break: break-word;
 }
 
 .Home .bottom {
@@ -42,6 +45,24 @@
 }
 
 .Home .bottom .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .Home .top .wrapper {
+    width: unset;
+  }
+
+  .Home .top {
+    padding: 15vh 0;
+  }
+
+  .Home .top .wrapper .prefix {
+    font-size: 80px;
+  }
+
+  .Home .top .wrapper .suffix {
+    font-size: 110px;
+  }
 }

@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DonationForm from './DonationForm'
 import ButtonBanner from './ButtonBanner'
 import './PledgeHeader.css';
+import { postDonation } from '../api';
+import { withRouter } from 'react-router-dom';
+import Toast from './Toast';
 
 function PledgeHeader ({
 	fundraise,
+	history,
 }) {
-	const onSubmit = (event) => {
-		event.preventDefault()
-		console.log('onSubimt', event)
+	const [hasError, setError] = useState(false)
+
+	const onSubmit = (form) => {
+		postDonation({
+			...form,
+			fundraisingId: fundraise._id,
+		}).then(({data}) => {
+			history.push(`/confirmation?id=${data._id}`)
+		}, err => {
+			setError(true)
+      setTimeout(() => {
+        setError(false)
+      }, 3000)
+		})
 	}
 
 	return (
@@ -32,7 +47,7 @@ function PledgeHeader ({
 					<div className="donation-progress">
 						<div className="bar-wrapper">
 							<div className="bar">
-								<div className="bar-inner" style={{width: '65%'}}></div>
+								<div className="bar-inner" style={{width: `${fundraise.amountRaisedPercentage}%`}}></div>
 							</div>
 							<div className="bar-stats">
 								<p>{fundraise.amountRaised}kr</p>
@@ -51,8 +66,12 @@ function PledgeHeader ({
 			<button className='arrow-banner'>
 				<img src='./assets/arrow.png' alt='scroll to bottom' />
 			</button>
+
+			{hasError && (
+				<Toast message='Invalid form, please check it and try again :)' />
+			)}
 		</div>
 	)
 }
 
-export default PledgeHeader;
+export default withRouter(PledgeHeader);

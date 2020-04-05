@@ -8,3 +8,8 @@ export function getFundraise () {
 export function postFundraise (body) {
   return axios.post(`${API_URL}/fundraisings`, body)
 }
+
+export function postDonation (body) {
+  return axios.post(`${API_URL}/donations`, body)
+}
+

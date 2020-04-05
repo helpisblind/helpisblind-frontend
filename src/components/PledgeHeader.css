@@ -1,15 +1,37 @@
 .PledgeHeader {
-  padding: 50px 10px;
   background-color: rgba(146, 59, 53, 0.25);
 }
 
 .PledgeHeader .wrapper {
+  padding: 30px 15px 0 15px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.PledgeHeader .title {
-  /* padding-left: 50px; */
+.PledgeHeader .arrow-banner {
+  width: 100%;
+  background: transparent;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+  border-style: none;
+}
+
+.PledgeHeader .arrow-banner:active {
+  transform: translateY(1px);
+}
+
+.PledgeHeader .arrow-banner:focus {
+  outline: 0;
+}
+
+.PledgeHeader .arrow-banner img {
+  width: 66px;
+}
+
+.PledgeHeader .arrow-banner:hover {
+  background-color: rgba(146, 59, 53, 0.1);
 }
 
 .PledgeHeader .title > * {
@@ -84,5 +106,9 @@
 @media only screen and (max-width: 768px) {
   .PledgeHeader .wrapper .title .badge {
     margin: 0;
+  }
+
+  .PledgeHeader .wrapper .arrow-banner img {
+    width: 33px;
   }
 }

@@ -39,8 +39,12 @@ function PledgeHeader () {
 					</div>
 
 					<DonationForm onSubmit={onSubmit} />
-				</div>
+				</div>			
 			</div>
+
+			<button className='arrow-banner'>
+				<img src='./assets/arrow.png' alt='scroll to bottom' />
+			</button>
 		</div>
 	)
 }

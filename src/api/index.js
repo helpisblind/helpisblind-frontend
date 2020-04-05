@@ -9,6 +9,10 @@ export function postFundraise (body) {
   return axios.post(`${API_URL}/fundraisings`, body)
 }
 
+export function getDonation (id) {
+  return axios.get(`${API_URL}/donations/${id}`)
+}
+
 export function postDonation (body) {
   return axios.post(`${API_URL}/donations`, body)
 }

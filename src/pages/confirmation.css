@@ -1,0 +1,30 @@
+.Confirmation .wrapper {
+  padding: 10vh 15px;
+  background: rgba(146, 59, 53, 0.25);
+}
+
+.Confirmation .title > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Confirmation .title .badge {
+  margin-right: 20px;
+}
+
+.Confirmation .description {
+  word-break: break-word;
+  text-align: center;
+}
+
+.Confirmation .message {
+  text-align: center;
+}
+
+.Confirmation h5 {
+  margin-bottom: 0;
+}
+
+.Confirmation .buttons {
+  text-align: center;
+}

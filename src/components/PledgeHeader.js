@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DonationForm from './DonationForm'
 import ButtonBanner from './ButtonBanner'
 import './PledgeHeader.css';
-import { postDonation } from '../api';
-import { withRouter } from 'react-router-dom';
+import { postDonation } from '../api'
+import { withRouter } from 'react-router-dom'
+import getAnonymousUser from '../utils/getAnonymousUser'
+
 import Toast from './Toast';
 
 function PledgeHeader ({
@@ -12,6 +14,7 @@ function PledgeHeader ({
 	onGoToNextClick,
 }) {
 	const [hasError, setError] = useState(false)
+	const [anonymous, setAnonymous] = useState({})
 	
 	const onSubmit = (form) => {
 		postDonation({
@@ -27,6 +30,10 @@ function PledgeHeader ({
 		})
 	}
 
+	useEffect(() => {
+		setAnonymous(getAnonymousUser())
+	}, [fundraise])
+
 	return (
 		<div className="PledgeHeader">
 			<ButtonBanner alt='Go to next pledge' onClick={onGoToNextClick} />
@@ -34,9 +41,9 @@ function PledgeHeader ({
 			<div className="wrapper">
 				<div className="title">
 					<div className="badge">
-						<img src="https://i.imgur.com/oGXjIZ2.png" alt="badge" />
+						<img src={anonymous.url} alt="badge" />
 					</div>
-					<h1>Castor felpudo needs your help!</h1>
+					<h1>{anonymous.animal} {anonymous.adjective} needs your help!</h1>
 				</div>
 				<div className="description">
 					<h4>{fundraise.story}</h4>
